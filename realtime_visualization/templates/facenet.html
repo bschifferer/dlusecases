@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deep Learning Demo</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        h2 {
+            color: royalblue;
+        }
+        .page {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+        .top {
+            background-color: #199EDD;
+            color: white;
+            padding-left: 30px;
+        }
+        .section {
+            flex :1;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .section-row {
+            flex: 1;
+            flex-direction: row;
+            display: flex;
+        }
+        .section-row:first-child {
+            border-bottom: dotted 1px #9E9E9E;
+        }
+        .section-cell {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-cell:nth-child(odd) {
+            border-right: dotted 1px #9E9E9E;
+        }
+        .content {
+            font-family: Verdana;
+            text-align: left;
+            display:inline-block;
+        }
+
+        .grey-rect {
+            display: inline-block;
+            height: 300px;
+            width: 450px;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="top">
+        <h1> Deep Learing Demo: Realtime example of face detection</h1>
+    </div>
+    <div class="section">
+        <div class="section-row">
+            <div class="section-cell">
+                <div class="content">
+                    <h2> Application of FaceNet for face detection</h2>
+					<img id="bg" src="{{ url_for('video_feed_facenet') }}">
+                </div>
+            </div>
+    </div>
+</div>
+</body>
+</html>

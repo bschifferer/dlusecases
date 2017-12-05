@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deep Learning Demo</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        h2 {
+            color: royalblue;
+        }
+        .page {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+        .top {
+            background-color: #199EDD;
+            color: white;
+            padding-left: 30px;
+        }
+        .section {
+            flex :1;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .section-row {
+            flex: 1;
+            flex-direction: row;
+            display: flex;
+        }
+        .section-row:first-child {
+            border-bottom: dotted 1px #9E9E9E;
+        }
+        .section-cell {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-cell:nth-child(odd) {
+            border-right: dotted 1px #9E9E9E;
+        }
+        .content {
+            font-family: Verdana;
+            text-align: left;
+            display:inline-block;
+        }
+
+        .grey-rect {
+            display: inline-block;
+            height: 300px;
+            width: 450px;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="top">
+        <h1> Deep Learing Demo: Visualization of representation learning and hierarchy of concepts on the example of image recognition</h1>
+    </div>
+    <div class="section">
+        <div class="section-row">
+            <div class="section-cell">
+                <div class="content">
+
+                    <h2> Hierarchical concepts in different hidden layers</h2>
+                    <img id="bg" src="/static/visualization2.jpg" height="70%" width="70%">
+                    <ul>
+                        <li>The input layer is the image (227 x 227 pixel)</li>
+                        <li>Hidden layer A extracts edges and bobs (low level features)</li>
+						<li>Hidden layer B extracts textures (mid level features)</li>
+						<li>Hidden layer C extracts object parts (high level features)</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="section-cell">
+
+                <div class="content">
+                    <h2> Visualization of hidden layer in real-time </h2>
+                    <img id="bg" src="{{ url_for('video_feed_alexnet') }}">
+                    <ul>
+                        <li>XXX</li>
+                        <li>XXX</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="section-row">
+            <div class="section-cell">
+                <div class="content">
+                    <h2> Further application with deep learning in image processing</h2>
+					<img id="bg" src="{{ url_for('video_feed_facenet') }}">
+                    <ul>
+                        <li>Tracking of people in malls, store, etc.</li>
+                        <li>Profiling: Predicting Age ; Gender ; Emotions</li>
+						<li>XXX</li>
+						<li>XXX</li>
+						<li>XXX</li>
+						<li>XXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-cell">
+                <div class="content">
+                    <h2> TBD </h2>
+                    <ul>
+                        <li>TBD</li>
+                        <li>TBD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
